@@ -4,6 +4,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.FlxState;
+import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
@@ -13,12 +14,13 @@ import options.OptionsState;
 
 class MainMenuState extends MusicBeatState
 {
+	public static var psychEngineVersion:String = '0.7.3';
+
 	var bg:FlxBackdrop;
 	var logo:FlxSprite;
 	var bgSprites:Array<FlxSprite> = [];
 	var menuItems:Array<{sprite:FlxSprite, id:String, state:Class<FlxState>, locked:Bool}> = [];
 	var curSelected:Int = 0;
-	public static var psychEngineVersion:String = '0.7.3';
 	var canSelect:Bool = true;
 
 	override function create()
@@ -45,7 +47,7 @@ class MainMenuState extends MusicBeatState
 		logo.scale.set(0.8, 0.8);
 		add(logo);
 
-		var options = [
+		var options:Array<{id:String, state:Class<FlxState>, locked:Bool}> = [
 			{id:"plsygames", state:FreeplayState, locked:false},
 			{id:"options", state:OptionsState, locked:false},
 			{id:"mods", state:null, locked:true},
@@ -69,7 +71,6 @@ class MainMenuState extends MusicBeatState
 
 		#if mobile
 		addTouchPad("UP_DOWN", "B");
-		addTouchPadCamera();
 		#end
 	}
 
