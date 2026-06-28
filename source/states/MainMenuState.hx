@@ -70,7 +70,7 @@ class MainMenuState extends MusicBeatState
 		updateSelection();
 
 		#if mobile
-		addTouchPad("UP_DOWN", "B");
+		addTouchPad("UP_DOWN", "A_B");
 		#end
 	}
 
