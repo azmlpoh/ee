@@ -18,6 +18,7 @@ class MainMenuState extends MusicBeatState
 	var bgSprites:Array<FlxSprite> = [];
 	var menuItems:Array<{sprite:FlxSprite, id:String, state:Class<FlxState>, locked:Bool}> = [];
 	var curSelected:Int = 0;
+	public static var psychEngineVersion:String = '0.7.3';
 	var canSelect:Bool = true;
 
 	override function create()
