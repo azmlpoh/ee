@@ -9,6 +9,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.addons.display.FlxBackdrop;
+import options.OptionsState;
 
 class MainMenuState extends MusicBeatState
 {
