@@ -3,7 +3,7 @@ package states;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
-import flixel.text.FlxText;
+import flixel.FlxState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
